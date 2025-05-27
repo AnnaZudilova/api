@@ -1,0 +1,310 @@
+{
+	"id": "3f939513-073b-413c-bb4e-d10a4edc59a9",
+	"name": "DemoShopping",
+	"timestamp": "2025-05-27T13:04:49.299Z",
+	"collection_id": "18165854-dedb5e37-2369-41b2-a2c1-6e19da782fe6",
+	"folder_id": 0,
+	"environment_id": "18165854-5b7e3888-f30d-4089-b850-622483f208fc",
+	"totalPass": 23,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-05-27T13:04:47.373Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "115a2b84-b5ae-4776-b6dc-60b23778883b",
+			"name": "200 Возвращает список всех продуктов",
+			"url": "https://qa.demoshopping.ru/products",
+			"time": 294,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 600ms": true,
+				"Varify that all data format is correct": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 600ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Varify that all data format is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				294
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 600ms": true,
+					"Varify that all data format is correct": true,
+					"Content-Type is present": true
+				}
+			]
+		},
+		{
+			"id": "8fc9061a-d07d-492a-a5e1-244ec0a9453b",
+			"name": "404 Ошибка при возврате списка всех продуктов",
+			"url": "https://qa.demoshopping.ru/p_roducts",
+			"time": 140,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				140
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Content-Type is present": true
+				}
+			]
+		},
+		{
+			"id": "2e42e93c-e2ae-4b81-ace7-2ad581807ce1",
+			"name": "200 Добавление нового продукта",
+			"url": "https://qa.demoshopping.ru/add-product",
+			"time": 99,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 600ms": true,
+				"Content-Type is present": true,
+				"Response is HTML": true,
+				"Response contains success message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 600ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is HTML": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				99
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 600ms": true,
+					"Content-Type is present": true,
+					"Response is HTML": true,
+					"Response contains success message": true
+				}
+			]
+		},
+		{
+			"id": "4eabbafb-8b57-45e1-8036-f3c6202499ed",
+			"name": "200 Поиск товара по ID",
+			"url": "https://qa.demoshopping.ru/products/id/20922",
+			"time": 76,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 600ms": true,
+				"Varify that all data format is correct": true,
+				"Response has Content-Type header": true,
+				"Content-Type is application/json; charset=utf-8": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 600ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Varify that all data format is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has Content-Type header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/json; charset=utf-8": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				76
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 600ms": true,
+					"Varify that all data format is correct": true,
+					"Response has Content-Type header": true,
+					"Content-Type is application/json; charset=utf-8": true
+				}
+			]
+		},
+		{
+			"id": "18872050-c872-401d-b080-85b91314fcaa",
+			"name": "404 Товар с таким ID не найден",
+			"url": "https://qa.demoshopping.ru/products/id/2073_3",
+			"time": 80,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response has Content-Type header": true,
+				"Response contains 'Товар с таким ID не найден'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has Content-Type header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'Товар с таким ID не найден'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				80
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response has Content-Type header": true,
+					"Response contains 'Товар с таким ID не найден'": true
+				}
+			]
+		},
+		{
+			"id": "26d261b3-5e59-4270-94e2-cf4e3fb363af",
+			"name": "200 Удаление товара по ID",
+			"url": "https://qa.demoshopping.ru/products/id/20922",
+			"time": 90,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response has Content-Type header": true,
+				"Response contains 'Товар удален'": true,
+				"Authorization header is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has Content-Type header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'Товар удален'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Authorization header is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				90
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response has Content-Type header": true,
+					"Response contains 'Товар удален'": true,
+					"Authorization header is present": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 779,
+	"collection": {
+		"requests": [
+			{
+				"id": "115a2b84-b5ae-4776-b6dc-60b23778883b",
+				"method": "GET"
+			},
+			{
+				"id": "8fc9061a-d07d-492a-a5e1-244ec0a9453b",
+				"method": "GET"
+			},
+			{
+				"id": "2e42e93c-e2ae-4b81-ace7-2ad581807ce1",
+				"method": "POST"
+			},
+			{
+				"id": "4eabbafb-8b57-45e1-8036-f3c6202499ed",
+				"method": "GET"
+			},
+			{
+				"id": "18872050-c872-401d-b080-85b91314fcaa",
+				"method": "GET"
+			},
+			{
+				"id": "26d261b3-5e59-4270-94e2-cf4e3fb363af",
+				"method": "DELETE"
+			}
+		]
+	}
+}
